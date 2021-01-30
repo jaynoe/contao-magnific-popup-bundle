@@ -1,0 +1,34 @@
+<?php
+$GLOBALS["TL_CSS"][] = "bundles/contaomagnificpopup/css/magnific-popup.css|static";
+?>
+<script src="bundles/contaomagnificpopup/js/jquery.magnific-popup.min.js"></script>
+<script>
+    jQuery(function($) {
+        $('div').each(function() {
+            var lightbox = $(this).find("a");
+            var lightboxValue = lightbox.attr("data-lightbox");
+            $(this).magnificPopup({
+                delegate: 'a[data-lightbox="'+lightboxValue+'"]',
+                type: 'image',
+                gallery: {
+                    enabled: true
+
+                    /** Go next/prev by clicking on image **/
+                    //navigateByImgClick: true,
+
+                    /** markup of an arrow button **/
+                    //arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+
+                    /** title for left button **/
+                    //tPrev: 'Previous (Left arrow key)',
+
+                    /** title for right button **/
+                    //tNext: 'Next (Right arrow key)',
+
+                    /** markup of counter **/
+                    //tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
+                }
+            });
+        });
+    });
+</script>

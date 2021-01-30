@@ -1,0 +1,37 @@
+{
+  "name": "jaynoe/contao-magnific-popup-bundle",
+  "type": "contao-bundle",
+  "version": "1.0",
+  "description": "jQuery Magnific Popup für das CMS Contao",
+  "authors": [
+    {
+      "name": "Jannik Nölke",
+      "email": "me@jaynoe.de"
+    }
+  ],
+  "require": {
+    "php": "^7.3",
+    "contao/core-bundle": "^4.4"
+  },
+  "conflict": {
+    "contao/core": "*",
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0"
+  },
+  "extra": {
+    "contao-manager-plugin": "Jaynoe\\ContaoMagnificPopupBundle\\ContaoManager\\Plugin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jaynoe\\ContaoMagnificPopupBundle\\": "src/"
+    },
+    "classmap": [
+      "src/Resources/contao/"
+    ],
+    "exclude-from-classmap": [
+      "src/Resources/contao/templates/"
+    ]
+  }
+}
